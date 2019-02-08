@@ -1,24 +1,53 @@
-/*
-var score = [80, 72, 91];
+//Use the control flow instructions (if, switch, cycles) to "select" which area of what shape to calculate.//
 
-alert (score.length ); 
+function areaTriangle (base,height) {
+  var result = (base*height)/2; //Won't divide by 2
+  return result; }
 
-for (let i = 0; i < score.length; i++) {
+function areaTrapezoid (base1, base2, height) {
+  var result = ((base1+base2)/2)*height 
+  return result; }
 
-  // function sum(a, b) {
-	// let x;
-	// x=a+b;
-  // return x;;
+function areaCircle (radius) {
+  var result = 3.14*(radius * radius)  //Won't multiply by 3.14
+  return result; }
+
+function areaRectangle (base,height) {
+  var result = (base*height)
+  return result; } //Works okay
+  
+
+//Prompt//
+
+var shape = prompt('What shape do you want to calculate? Triangle, Trapezoid, Circle or Rectangle?');
+
+//Switch Function//
+
+
+switch (shape) {
+  case 'Triangle':
+    var base = prompt ('Please insert the base value:')
+    var height = prompt ('Please insert the height value:')
+    alert (areaTriangle (base,height));
+    break;
+  case 'Trapezoid':
+    var base1 = prompt ('Please insert the first base value:')
+    var base2 = prompt ('Please insert the second base value:')
+    var height = prompt ('Please insert the height value:')
+    alert (areaTrapezoid (base1, base2 ,height));
+    break;
+  case 'Circle':
+    var radius = prompt ('Please insert the radius value:')
+    alert (areaCircle (radius));
+    break;
+  case 'Rectangle':
+    var base = prompt ('Please insert the base value:')
+    var height = prompt ('Please insert the height value:')
+    alert (areaRectangle (base,height));
+    break;
+
 }
-var average =
-*/
-var score = [80, 72, 91];
 
-alert (score.length );
+//ask user what shape
 
-let sum = 0;
-for (let i = 0; i < score.length; i++) {
-      sum = sum + score[i];   
-}
-var average = sum / score.length;  
-alert(average);
+//decide what function to execute
